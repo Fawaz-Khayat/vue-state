@@ -12,6 +12,9 @@ export default new Vuex.Store({
       'http://youtube.com',
     ],
   },
+  getters: {
+    countLinks: state => state.links.length,
+  },
   mutations: {
 
   },
