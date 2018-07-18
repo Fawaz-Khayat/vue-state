@@ -2,6 +2,11 @@
   <div class="hello">
     <div class="left">
       <h1>{{ title }}</h1>
+      <ul>
+        <li v-for="(link, index) in links" v-bind:key="index">
+          {{ link }}
+        </li>
+      </ul>
     </div>
     <div class="right">
 
@@ -17,6 +22,7 @@ export default {
   computed: {
     ...mapState([
       'title',
+      'links',
     ]),
   },
 };
